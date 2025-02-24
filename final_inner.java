@@ -13,6 +13,8 @@ class final_inner {
         {
             A obj =new A();
             A.B.display();
+            //A.B objB=obj.new B();
+            //objB.display();
         }
     
 }
