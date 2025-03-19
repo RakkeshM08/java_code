@@ -1,0 +1,44 @@
+
+
+public class Problem3 {
+
+	public static void main(String[] args) {
+		
+		//dvdf -  op - 3
+		//abcabcbb - op - 3
+		
+		String s = "dvdf";
+		
+		String sub = "";
+		
+		int max = 0;
+		
+		for(int i=0;i<s.length();i++) {
+			char ch = s.charAt(i);
+			
+			sub += ch;
+			for(int j=i+1;j<s.length();j++) {
+				
+				if(sub.indexOf(s.charAt(j)) == -1) {
+					sub+=s.charAt(j);
+				}
+				else {
+					break;
+				}
+			}
+			System.out.println(sub);
+			if(sub.length() > max) {
+				max = sub.length();
+			}
+			sub = "";
+			//System.out.println();
+			
+			
+		}
+		System.out.println(max);
+		
+		
+		
+	}
+
+}
